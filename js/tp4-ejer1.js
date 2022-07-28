@@ -5,15 +5,22 @@ let auto = {
     caja:"manual",
     anio:2017,
     encender(){
-        if(confirm('desea encender en el automovil')){
-            document.write("automovil encendido")
-        }else{
-            document.write("automovil apagado")
+        confirm('encender automivil');{
+
+            document.write('automovil encendido')
+        }
+    },
+
+
+    apagarAuto(){
+        confirm('apagar automovil');{
+            document.write('autmovil apagado')
         }
     }
-
-
+   
 }
 
+
+
 auto.encender()
-console.log(`el auto es de color ${auto.color}`)
+// auto.apagarAuto()
