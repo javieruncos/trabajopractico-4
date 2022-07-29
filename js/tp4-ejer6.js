@@ -69,23 +69,21 @@ class Libro {
     console.log(`el libro que contiene mas paginas es ${nuevolibro.regresarNombre}`)
 
    }else if(nuevolibro2.numeroPaginas > nuevolibro.numeroPaginas && nuevolibro2.numeroPaginas > nuevoLibro3.numeroPaginas ){
-
     console.log(`el libro que contiene mas paginas es ${nuevolibro2.regresarNombre}`)
    
    }else if(nuevoLibro3.numeroPaginas > nuevolibro.numeroPaginas && nuevoLibro3.numeroPaginas > nuevolibro2.numeroPaginas ){
-    
     console.log(`el libro que contiene mas paginas es ${nuevoLibro3.regresarNombre}`)
    }
-   
+    
 }
 }
 
 
-let nuevolibro = new Libro (123456,"Cien años de soledad",'Gabriel Garcia Marquez', 191 ,);
+let nuevolibro = new Libro (123456,"Cien años de soledad",'Gabriel Garcia Marquez', 464 ,);
 
 let nuevolibro2 = new Libro (22334455,'El alquimista','Paulo Coelho',192)
 
-let nuevoLibro3 = new Libro (45645445,'El arte de la guerra','Sun Tzu',193)
+let nuevoLibro3 = new Libro (45645445,'El arte de la guerra','Sun Tzu',128)
 
 nuevolibro.mostrarLibro()
 // mostramos los get en consola
@@ -101,6 +99,3 @@ console.log(nuevoLibro3.regresarNombre)
 
 nuevolibro.calcularPaginas()
 
-// if(nuevolibro.numeroPaginas > nuevolibro2.numeroPaginas){
-//     console.log(`el libro que contiene mas paginas es ${nuevolibro.regresarNombre}`)
-// }

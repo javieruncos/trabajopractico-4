@@ -13,3 +13,49 @@ buscarContacto(nombre): busca un contacto por su nombre y muestra su teléfono.
 eliminarContacto(Contacto c): elimina el contacto de la agenda, indica si se ha eliminado o no por pantalla
 agendaLlena(): indica si la agenda está llena.
 huecosLibres(): indica cuántos contactos más podemos ingresar.*/
+let agenda = [];
+
+class Agenda {
+    constructor(nombre,telefono){
+        this.nombre = nombre;
+        this.telefono = telefono;
+    }
+
+    aniadircontacto(){
+
+        
+        for(let i = 0; i< 10;i++){
+            this.nombre = prompt('ingresar usuario')
+            this.telefono = parseInt(prompt('ingresa numero de telefono'))
+
+             agenda.push(this.nombre , this.telefono); 
+        
+
+            if(confirm('desea agregar otro usuario')){
+
+            }else{
+                document.write(agenda)
+                break
+                
+            }
+        }
+
+        if(agenda.length >= 10){
+            alert('agenda llena,no puedes agregar mas usuarios')
+        }
+        
+    }
+
+    get regresaragenda(){
+        return  agenda
+    }
+}
+
+
+let nuevo = new Agenda("javier",4232323);
+
+
+nuevo.aniadircontacto()
+
+
+console.log(nuevo.regresaragenda)
