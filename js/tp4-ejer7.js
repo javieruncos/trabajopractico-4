@@ -15,8 +15,6 @@ agendaLlena(): indica si la agenda está llena.
 huecosLibres(): indica cuántos contactos más podemos ingresar.*/
 let agenda = [];
 
-let contacto;
-
 class Agenda {
   constructor(nombre, telefono) {
     this.nombre = nombre;
