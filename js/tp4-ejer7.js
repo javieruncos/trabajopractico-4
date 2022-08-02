@@ -13,49 +13,60 @@ buscarContacto(nombre): busca un contacto por su nombre y muestra su teléfono.
 eliminarContacto(Contacto c): elimina el contacto de la agenda, indica si se ha eliminado o no por pantalla
 agendaLlena(): indica si la agenda está llena.
 huecosLibres(): indica cuántos contactos más podemos ingresar.*/
-let agenda = [];
+let agenda = []
+
+let contacto;
 
 class Agenda {
-    constructor(nombre,telefono){
-        this.nombre = nombre;
-        this.telefono = telefono;
+  constructor(nombre, telefono) {
+    this.nombre = nombre;
+    this.telefono = telefono;
+  }
+
+  agregarContacto() {
+    for (let i = 0; i < 10; i++) {
+       nuevoContacto = new Agenda (prompt('ingresa un nombre'),parseInt(prompt('ingresa un numero de telfono')))
+
+       agenda.push(nuevoContacto)
+
+      if (confirm("desea agregar  mas contatos ?")) {
+      } else {
+        break;
+      }
+      if (agenda.length >= 10) {
+        alert("agenda llena , no puedes agregar mas contactos");
+        break
+      }
     }
+    agenda.sort();
+    console.log(agenda)
+  }
 
-    aniadircontacto(){
+  contactoExiste(){
+   
+  }
 
-        
-        for(let i = 0; i< 10;i++){
-            this.nombre = prompt('ingresar usuario')
-            this.telefono = parseInt(prompt('ingresa numero de telefono'))
-
-             agenda.push(this.nombre , this.telefono); 
-        
-
-            if(confirm('desea agregar otro usuario')){
-
-            }else{
-                document.write(agenda)
-                break
-                
-            }
-        }
-
-        if(agenda.length >= 10){
-            alert('agenda llena,no puedes agregar mas usuarios')
-        }
-        
+  listarContacto(){
+       for(let i = 0; i< agenda.length;i++){
+          document.write(Object.values(agenda[i]))
+       }
     }
+    
+      get regresarNombre(){
+       return this.nombre
+      }
+  }
 
-    get regresaragenda(){
-        return  agenda
-    }
-}
-
-
-let nuevo = new Agenda("javier",4232323);
-
-
-nuevo.aniadircontacto()
+  
 
 
-console.log(nuevo.regresaragenda)
+
+
+
+
+let nuevoContacto = new Agenda(
+  prompt("ingresa un nombre"),
+  parseInt(prompt("ingresa un numero de telefono"))
+);
+agenda.push(nuevoContacto);
+
